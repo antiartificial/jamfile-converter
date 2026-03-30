@@ -1,0 +1,35 @@
+## Haiku Generic Jamfile v1.0.3 ##
+
+## A static library
+
+NAME = libutil ;
+TYPE = STATIC ;
+APP_MIME_SIG = ;
+
+SRCS = string_utils.cpp
+    file_utils.cpp
+    math_utils.cpp
+    container/hashmap.cpp
+    container/vector.cpp ;
+
+RSRCS = ;
+RDEFS = ;
+
+LIBS = ;
+
+LIBPATHS = ;
+SYSTEM_INCLUDE_PATHS = ;
+LOCAL_INCLUDE_PATHS = . container ;
+
+OPTIMIZE = FULL ;
+LOCALES = ;
+DEFINES = ;
+WARNINGS = ALL ;
+SYMBOLS = ;
+DEBUGGER = ;
+COMPILER_FLAGS = ;
+LINKER_FLAGS = ;
+DRIVER_PATH = ;
+
+## Include the Jamfile-engine
+include $(BUILDHOME)/etc/Jamfile-engine ;

@@ -1,0 +1,30 @@
+## Haiku Generic Jamfile v1.0.3 ##
+
+## App with quoted name containing spaces
+
+NAME = "My Cool App" ;
+TYPE = APP ;
+APP_MIME_SIG = x-vnd.MyCoolApp ;
+
+SRCS = App.cpp MainWindow.cpp ;
+RSRCS = MyCoolApp.rsrc ;
+RDEFS = MyCoolApp.rdef ;
+
+LIBS = be locale localestub ;
+
+LIBPATHS = ;
+SYSTEM_INCLUDE_PATHS = ;
+LOCAL_INCLUDE_PATHS = ;
+
+OPTIMIZE = NONE ;
+LOCALES = en ;
+DEFINES = ;
+WARNINGS = ;
+SYMBOLS = ;
+DEBUGGER = TRUE ;
+COMPILER_FLAGS = ;
+LINKER_FLAGS = ;
+DRIVER_PATH = ;
+
+## Include the Jamfile-engine
+include $(BUILDHOME)/etc/Jamfile-engine ;

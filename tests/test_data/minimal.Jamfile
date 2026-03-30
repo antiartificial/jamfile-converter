@@ -1,0 +1,8 @@
+## Minimal Jamfile - only required fields, everything else empty
+
+NAME = tiny ;
+TYPE = APP ;
+SRCS = main.cpp ;
+
+## Include the Jamfile-engine
+include $(BUILDHOME)/etc/Jamfile-engine ;

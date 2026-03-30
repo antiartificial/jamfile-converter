@@ -1,0 +1,62 @@
+## Converted from HaikuArchives/ArtPaint Makefile (real-world Haiku app)
+
+NAME = ArtPaint ;
+TYPE = APP ;
+APP_MIME_SIG = application/x-vnd.artpaint ;
+
+SRCS = artpaint/Utilities/BitmapUtilities.cpp artpaint/Utilities/ScaleUtilities.cpp
+    artpaint/application/FilePanels.cpp artpaint/application/FloaterManager.cpp
+    artpaint/application/HSPolygon.cpp artpaint/application/IntelligentPathFinder.cpp artpaint/application/MatrixView.cpp
+    artpaint/application/MessageFilters.cpp artpaint/application/PaintApplication.cpp artpaint/application/ProjectFileFunctions.cpp
+    artpaint/application/RandomNumberGenerator.cpp artpaint/application/RefFilters.cpp artpaint/application/ResourceServer.cpp
+    artpaint/application/Selection.cpp artpaint/application/SettingsServer.cpp
+    artpaint/application/UndoAction.cpp artpaint/application/UndoEvent.cpp artpaint/application/UndoQueue.cpp
+    artpaint/application/UtilityClasses.cpp artpaint/controls/ColorPalette.cpp
+    artpaint/application/CustomGridLayout.cpp
+    artpaint/controls/ColorView.cpp artpaint/controls/HSPictureButton.cpp artpaint/controls/NumberControl.cpp
+    artpaint/controls/NumberSliderControl.cpp artpaint/controls/PopUpList.cpp artpaint/controls/PopUpSlider.cpp artpaint/controls/RGBControl.cpp
+    artpaint/controls/FloatControl.cpp artpaint/controls/FloatSliderControl.cpp
+    artpaint/controls/VisualColorControl.cpp artpaint/layers/Layer.cpp
+    artpaint/controls/MultichannelColorControl.cpp artpaint/controls/YUVColorControl.cpp
+    artpaint/controls/HSVColorControl.cpp artpaint/controls/CMYColorControl.cpp artpaint/controls/RGBColorControl.cpp
+    artpaint/controls/LABColorControl.cpp artpaint/controls/ColorSlider.cpp artpaint/controls/ColorFloatSlider.cpp
+    artpaint/layers/LayerView.cpp artpaint/layers/LayerWindow.cpp artpaint/paintwindow/BackgroundView.cpp artpaint/paintwindow/Image.cpp
+    artpaint/paintwindow/ImageUpdater.cpp artpaint/paintwindow/ImageView.cpp artpaint/paintwindow/MagnificationView.cpp
+    artpaint/paintwindow/PaintWindow.cpp artpaint/paintwindow/PaintWindowMenuItem.cpp artpaint/paintwindow/StatusView.cpp
+    artpaint/tools/AirBrushTool.cpp artpaint/tools/BitmapDrawer.cpp artpaint/tools/BlurTool.cpp artpaint/tools/Brush.cpp artpaint/tools/BrushEditor.cpp
+    artpaint/tools/BrushTool.cpp artpaint/tools/ColorSelectorTool.cpp artpaint/tools/CoordinateQueue.cpp artpaint/tools/CoordinateReader.cpp
+    artpaint/tools/DrawingTool.cpp artpaint/tools/EllipseTool.cpp artpaint/tools/EraserTool.cpp artpaint/tools/FillTool.cpp artpaint/tools/FreeLineTool.cpp
+    artpaint/tools/HairyBrushTool.cpp artpaint/tools/RectangleTool.cpp artpaint/tools/SelectorTool.cpp artpaint/tools/StraightLineTool.cpp
+    artpaint/tools/TextTool.cpp artpaint/tools/ToolButton.cpp artpaint/tools/ToolEventAdapter.cpp artpaint/tools/ToolManager.cpp
+    artpaint/tools/ToolScript.cpp artpaint/tools/ToolSelectionWindow.cpp artpaint/tools/ToolSetupWindow.cpp artpaint/tools/TransparencyTool.cpp artpaint/tools/CloneTool.cpp
+    artpaint/viewmanipulators/CropManipulator.cpp artpaint/viewmanipulators/FlipManipulator.cpp
+    artpaint/viewmanipulators/FreeTransformManipulator.cpp artpaint/viewmanipulators/Manipulator.cpp
+    artpaint/viewmanipulators/ManipulatorInformer.cpp artpaint/viewmanipulators/ManipulatorServer.cpp
+    artpaint/viewmanipulators/RotationManipulator.cpp artpaint/viewmanipulators/Rotate90Manipulator.cpp
+    artpaint/viewmanipulators/ScaleManipulator.cpp artpaint/viewmanipulators/ScaleCanvasManipulator.cpp
+    artpaint/viewmanipulators/TextManipulator.cpp
+    artpaint/viewmanipulators/TranslationManipulator.cpp artpaint/viewmanipulators/TransparencyManipulator.cpp
+    artpaint/viewmanipulators/WindowGUIManipulator.cpp
+    artpaint/windows/BrushStoreWindow.cpp artpaint/windows/DatatypeSetupWindow.cpp artpaint/windows/GlobalSetupWindow.cpp
+    artpaint/windows/ManipulatorWindow.cpp artpaint/windows/ViewSetupWindow.cpp ;
+
+RDEFS = artpaint/ArtPaint.rdef ;
+RSRCS = ;
+
+LIBS = be tracker translation localestub z ;
+
+LIBPATHS = ;
+SYSTEM_INCLUDE_PATHS = ;
+LOCAL_INCLUDE_PATHS = ;
+
+OPTIMIZE = FULL ;
+LOCALES = ca cs de en_AU en_GB en es_419 es fr fur it ja nb nl sv tr uk ;
+DEFINES = ;
+WARNINGS = ALL ;
+SYMBOLS = ;
+DEBUGGER = ;
+COMPILER_FLAGS = -Werror ;
+LINKER_FLAGS = ;
+DRIVER_PATH = ;
+
+include $(BUILDHOME)/etc/Jamfile-engine ;

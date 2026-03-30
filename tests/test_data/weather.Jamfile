@@ -1,0 +1,39 @@
+## Converted from HaikuArchives/Weather Makefile (real-world Haiku weather app)
+
+NAME = Weather ;
+TYPE = APP ;
+APP_MIME_SIG = x-vnd.przemub.Weather ;
+
+SRCS = Source/App.cpp
+    Source/LabelView.cpp
+    Source/WSOpenMeteo.cpp
+    Source/MainWindow.cpp
+    Source/PreferencesWindow.cpp
+    Source/ForecastDayView.cpp
+    Source/ForecastView.cpp
+    Source/ForecastDeskbarView.cpp
+    Source/CitiesListSelectionWindow.cpp
+    Source/Util.cpp ;
+
+RDEFS = Source/Weather.rdef ;
+RSRCS = ;
+
+LIBS = be bnetapi localestub translation netservices shared ;
+
+LIBPATHS = ;
+SYSTEM_INCLUDE_PATHS = /system/develop/headers/private/shared
+    /system/develop/headers/private/interface
+    /system/develop/headers/private/netservices ;
+LOCAL_INCLUDE_PATHS = ;
+
+OPTIMIZE = ;
+LOCALES = ca cs da de en_AU en_GB en eo es_419 es fr fur it ja nb nl pt ro ru sv tr uk ;
+DEFINES = ;
+WARNINGS = ;
+SYMBOLS = ;
+DEBUGGER = ;
+COMPILER_FLAGS = ;
+LINKER_FLAGS = ;
+DRIVER_PATH = ;
+
+include $(BUILDHOME)/etc/Jamfile-engine ;

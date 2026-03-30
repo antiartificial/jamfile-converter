@@ -1,0 +1,67 @@
+## Haiku Generic Jamfile v1.0.3 ##
+
+## Sample Jamfile for testing the converter
+
+## Application Specific Settings ---------------------------------------------
+
+# Specify the name of the binary
+NAME = HelloWorld ;
+
+# Specify the type of binary
+TYPE = APP ;
+
+# Specify the application MIME signature
+APP_MIME_SIG = x-vnd.Example-HelloWorld ;
+
+# Specify the source files to use
+SRCS = main.cpp
+    utils.cpp
+    gui/Window.cpp ;
+
+# Specify the resource files to use
+RSRCS = HelloWorld.rsrc ;
+
+# Additionally specify the path of rdef files
+RDEFS = HelloWorld.rdef ;
+
+# Specify additional libraries to link against
+LIBS = be tracker locale localestub ;
+
+# Specify additional paths to directories
+LIBPATHS = ;
+
+# Additional paths to look for system headers
+SYSTEM_INCLUDE_PATHS = /boot/system/develop/headers ;
+
+# Additional paths to look for local headers
+LOCAL_INCLUDE_PATHS = src include ;
+
+# Specify the level of optimization that you desire
+OPTIMIZE = SOME ;
+
+# Specify the codes for languages
+LOCALES = en de fr ;
+
+# Specify any preprocessor symbols to be defined.
+DEFINES = HAIKU_TARGET DEBUG=1 ;
+
+# Specify special warning levels
+WARNINGS = ALL ;
+
+# Specify whether image symbols will be created
+SYMBOLS = TRUE ;
+
+# Specify debug settings
+DEBUGGER = ;
+
+# Specify additional compiler flags for all files
+COMPILER_FLAGS = ;
+
+# Specify additional linker flags
+LINKER_FLAGS = ;
+
+# Driver path (only for TYPE == DRIVER)
+DRIVER_PATH = ;
+
+## Include the Jamfile-engine
+include $(BUILDHOME)/etc/Jamfile-engine ;

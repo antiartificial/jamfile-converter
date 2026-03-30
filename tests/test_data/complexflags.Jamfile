@@ -1,0 +1,41 @@
+## Haiku Generic Jamfile v1.0.3 ##
+
+## App with complex compiler/linker flags and multiple defines
+
+NAME = NetSurf ;
+TYPE = APP ;
+APP_MIME_SIG = x-vnd.NetSurf ;
+
+SRCS = main.cpp
+    browser/BrowserWindow.cpp
+    browser/TabView.cpp
+    browser/URLBar.cpp
+    network/HttpClient.cpp
+    network/CookieJar.cpp
+    render/HtmlParser.cpp
+    render/CssEngine.cpp
+    render/DomTree.cpp
+    render/LayoutEngine.cpp
+    render/RenderView.cpp ;
+
+RSRCS = NetSurf.rsrc ;
+RDEFS = NetSurf.rdef ;
+
+LIBS = be network bnetapi translation locale localestub ssl crypto z ;
+
+LIBPATHS = /boot/system/lib /boot/system/develop/lib ;
+SYSTEM_INCLUDE_PATHS = /boot/system/develop/headers /boot/system/develop/headers/private/net ;
+LOCAL_INCLUDE_PATHS = . browser network render ;
+
+OPTIMIZE = FULL ;
+LOCALES = en de fr es pt ja zh ;
+DEFINES = HAIKU_TARGET_PLATFORM_HAIKU NDEBUG HAVE_SSL=1 VERSION=\"3.10\" ;
+WARNINGS = ALL ;
+SYMBOLS = ;
+DEBUGGER = ;
+COMPILER_FLAGS = -Wall -Wextra -Wno-unused-parameter -std=c++17 ;
+LINKER_FLAGS = -Wl,--no-undefined -Wl,--as-needed ;
+DRIVER_PATH = ;
+
+## Include the Jamfile-engine
+include $(BUILDHOME)/etc/Jamfile-engine ;

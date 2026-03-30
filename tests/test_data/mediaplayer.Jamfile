@@ -1,0 +1,39 @@
+## Haiku Generic Jamfile v1.0.3 ##
+
+## A media player application for Haiku
+
+NAME = MediaPlayer ;
+TYPE = APP ;
+APP_MIME_SIG = x-vnd.Haiku-MediaPlayer ;
+
+SRCS = src/MainApp.cpp
+    src/MainWindow.cpp
+    src/PlayerView.cpp
+    src/TransportControls.cpp
+    src/PlaylistView.cpp
+    src/PlaylistItem.cpp
+    src/MediaController.cpp
+    src/SettingsWindow.cpp
+    src/InfoWindow.cpp ;
+
+RSRCS = ;
+RDEFS = MediaPlayer.rdef ;
+
+LIBS = be media tracker translation locale localestub ;
+
+LIBPATHS = ;
+SYSTEM_INCLUDE_PATHS = ;
+LOCAL_INCLUDE_PATHS = src ;
+
+OPTIMIZE = FULL ;
+LOCALES = en de fr ja ;
+DEFINES = ;
+WARNINGS = ALL ;
+SYMBOLS = ;
+DEBUGGER = ;
+COMPILER_FLAGS = ;
+LINKER_FLAGS = ;
+DRIVER_PATH = ;
+
+## Include the Jamfile-engine
+include $(BUILDHOME)/etc/Jamfile-engine ;

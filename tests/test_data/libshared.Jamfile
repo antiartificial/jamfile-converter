@@ -1,0 +1,33 @@
+## Haiku Generic Jamfile v1.0.3 ##
+
+## A shared library add-on
+
+NAME = libmyaddon.so ;
+TYPE = SHARED ;
+APP_MIME_SIG = ;
+
+SRCS = addon.cpp
+    codec.cpp
+    utils/helpers.cpp ;
+
+RSRCS = ;
+RDEFS = ;
+
+LIBS = be media ;
+
+LIBPATHS = /boot/system/lib ;
+SYSTEM_INCLUDE_PATHS = /boot/system/develop/headers/private/media ;
+LOCAL_INCLUDE_PATHS = . utils ;
+
+OPTIMIZE = SOME ;
+LOCALES = ;
+DEFINES = BUILDING_ADDON=1 ;
+WARNINGS = ALL ;
+SYMBOLS = TRUE ;
+DEBUGGER = ;
+COMPILER_FLAGS = -fPIC ;
+LINKER_FLAGS = ;
+DRIVER_PATH = ;
+
+## Include the Jamfile-engine
+include $(BUILDHOME)/etc/Jamfile-engine ;

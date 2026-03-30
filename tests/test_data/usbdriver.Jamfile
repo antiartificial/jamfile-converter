@@ -1,0 +1,31 @@
+## Haiku Generic Jamfile v1.0.3 ##
+
+## A USB webcam driver
+
+NAME = usb_webcam ;
+TYPE = DRIVER ;
+APP_MIME_SIG = ;
+
+SRCS = driver.cpp usb_device.cpp camera.cpp ;
+
+RSRCS = ;
+RDEFS = ;
+
+LIBS = ;
+
+LIBPATHS = ;
+SYSTEM_INCLUDE_PATHS = /boot/system/develop/headers/private/kernel /boot/system/develop/headers/private/drivers ;
+LOCAL_INCLUDE_PATHS = ;
+
+OPTIMIZE = FULL ;
+LOCALES = ;
+DEFINES = _KERNEL_MODE=1 ;
+WARNINGS = ALL ;
+SYMBOLS = TRUE ;
+DEBUGGER = ;
+COMPILER_FLAGS = -fno-exceptions -fno-rtti ;
+LINKER_FLAGS = ;
+DRIVER_PATH = video/usb ;
+
+## Include the Jamfile-engine
+include $(BUILDHOME)/etc/Jamfile-engine ;
