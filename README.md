@@ -53,13 +53,13 @@ There are 15 unit tests covering parsing and CMake generation. They run in a sec
 
 ## How we tested it
 
-The unit tests cover the obvious stuff -- basic parsing, multiline values, comments, empty fields, all four target types, quoted names, debug flags, etc.
+The unit tests cover the obvious stuff: basic parsing, multiline values, comments, empty fields, all four target types, quoted names, debug flags, etc.
 
 For more real-world testing we grabbed Makefiles from actual HaikuArchives apps (the Makefile-engine uses the same variable names as the Jamfile-engine, just different syntax) and converted them by hand to Jamfile format:
 
-- **[ArtPaint](https://github.com/HaikuArchives/ArtPaint)** -- a full painting app with 96 source files spread across multiple subdirectories, locales, `-Werror`
-- **[Slayer](https://github.com/HaikuArchives/Slayer)** -- a process manager, 13 source files, several Haiku-specific libs
-- **[Weather](https://github.com/HaikuArchives/Weather)** -- a weather app using private Haiku network headers
+- **[ArtPaint](https://github.com/HaikuArchives/ArtPaint)** - a full painting app with 96 source files spread across multiple subdirectories, locales, `-Werror`
+- **[Slayer](https://github.com/HaikuArchives/Slayer)** - a process manager, 13 source files, several Haiku-specific libs
+- **[Weather](https://github.com/HaikuArchives/Weather)** - a weather app using private Haiku network headers
 
 All three converted without issues, source file counts match exactly.
 
